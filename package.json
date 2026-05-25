@@ -1,0 +1,16 @@
+{
+  "name": "code-quality",
+  "private": true,
+  "packageManager": "pnpm@10.0.0",
+  "scripts": {
+    "check": "biome ci .",
+    "format": "biome check --write .",
+    "release:biome-config": "cd packages/biome-config && pnpm version --tag-version-prefix=biome-config-v",
+    "release:tsconfig": "cd packages/tsconfig && pnpm version --tag-version-prefix=tsconfig-v"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.4.10",
+    "@significa/biome-config": "workspace:*",
+    "@significa/tsconfig": "workspace:*"
+  }
+}
